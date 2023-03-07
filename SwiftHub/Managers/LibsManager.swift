@@ -16,7 +16,7 @@ import Kingfisher
 #if DEBUG
 import FLEX
 #endif
-import FirebaseCrashlytics
+//import FirebaseCrashlytics
 import NSObject_Rx
 import RxViewController
 import RxOptional
@@ -26,10 +26,10 @@ import SwiftDate
 import Hero
 import KafkaRefresh
 import Mixpanel
-import FirebaseCore
+//import FirebaseCore
 import DropDown
 import Toast_Swift
-import GoogleMobileAds
+//import GoogleMobileAds
 
 typealias DropDownView = DropDown
 
@@ -130,13 +130,13 @@ class LibsManager: NSObject {
     }
 
     func setupAnalytics() {
-        FirebaseApp.configure()
+//        FirebaseApp.configure()
         Mixpanel.initialize(token: Keys.mixpanel.apiKey, trackAutomaticEvents: true)
-        FirebaseConfiguration.shared.setLoggerLevel(.min)
+//        FirebaseConfiguration.shared.setLoggerLevel(.min)
     }
 
     func setupAds() {
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+//        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 }
 

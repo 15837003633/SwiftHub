@@ -74,11 +74,11 @@ target 'SwiftHub' do
     pod 'Mixpanel-swift', '~> 4.0'  # https://github.com/mixpanel/mixpanel-iphone
 
     # Firebase https://github.com/firebase/firebase-ios-sdk
-    pod 'FirebaseAnalytics', '~> 10.0'
-    pod 'FirebaseCrashlytics', '~> 10.0'
+    # pod 'FirebaseAnalytics', '~> 10.0'
+    # pod 'FirebaseCrashlytics', '~> 10.0'
 
     # Ads
-    pod 'Google-Mobile-Ads-SDK', '~> 9.0'
+    # pod 'Google-Mobile-Ads-SDK', '~> 9.0'
     
     target 'SwiftHubTests' do
         inherit! :search_paths

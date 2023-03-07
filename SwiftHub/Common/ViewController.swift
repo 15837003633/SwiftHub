@@ -12,7 +12,7 @@ import RxCocoa
 import DZNEmptyDataSet
 import Hero
 import Localize_Swift
-import GoogleMobileAds
+//import GoogleMobileAds
 import SVProgressHUD
 
 class ViewController: UIViewController, Navigatable {
@@ -74,11 +74,12 @@ class ViewController: UIViewController, Navigatable {
         return view
     }()
 
-    lazy var bannerView: GADBannerView = {
-        let view = GADBannerView(adSize: GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(view.width))
-        view.rootViewController = self
-        view.adUnitID = Keys.adMob.apiKey
-        view.hero.id = "BannerView"
+    lazy var bannerView: UIView = {
+//        let view = GADBannerView(adSize: GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(view.width))
+//        view.rootViewController = self
+//        view.adUnitID = Keys.adMob.apiKey
+//        view.hero.id = "BannerView"
+        let view = UIView()
         return view
     }()
 
@@ -185,7 +186,7 @@ class ViewController: UIViewController, Navigatable {
         hero.isEnabled = true
         navigationItem.backBarButtonItem = backBarButton
 
-        bannerView.load(GADRequest())
+//        bannerView.load(GADRequest())
         LibsManager.shared.bannersEnabled.asDriver().drive(onNext: { [weak self] (enabled) in
             guard let self = self else { return }
             self.bannerView.removeFromSuperview()
